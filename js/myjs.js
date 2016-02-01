@@ -2,7 +2,6 @@
 
   		$("#modal1").openModal();
   		$(".button-collapse").sideNav();
-  		new WOW().init();
 
   		function closeForm() {
   			$nome = $("#name").val();
