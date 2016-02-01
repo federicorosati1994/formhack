@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>hackPassword</title>
+	<!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Compiled and minified CSS -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+	<!-- Animate -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+	<!-- Scrolling nav -->
+	<link rel="stylesheet" type="text/css" href="css/scrolling-nav.css">
+	<!-- myCSS -->
+	<link rel="stylesheet" type="text/css" href="css/mycss.css">
+</head>
+<body>
+
+	<div id="modal1" class="modal">
+	    <div class="modal-content">
+	      	<div class="row">
+			    <div class="col s12">
+			      <div class="row">
+			        <div class="input-field col s12">
+			          	<i class="material-icons prefix">face</i>
+			          	<label for="icon_prefix">Nome</label>
+			          	<input id="name" type="text" class="validate">
+			        </div>
+			        <div class="input-field col s12 m6">
+			          <i class="material-icons prefix">lock outline</i>
+			          <label for="psw">Password</label>
+			          <input id="psw" type="password" class="validate">
+			        </div>
+			        <div class="input-field col s12 m6">
+			          <i class="material-icons prefix">lock outline</i>
+			          <label for="psw">Conferma password</label>
+			          <input id="psw2" type="password" class="validate">
+			        </div>
+			        <div class="input-field col s12 center-align">
+			          <button onclick="closeForm()" class="waves-effect waves-light btn">Invia</button>
+			        </div>
+			      </div>
+			    </div>
+			</div>
+	    </div>
+	</div>
+
+	<div class="navbar-fixed nascondi hidden">
+	  	<nav>
+	    	<div class="nav-wrapper">
+		      	<a href="index.html" class="brand-logo animated slideInDown" data-duration="2s" data-delay="5s">hackPassword</a>
+		      	<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons animated flipInY">menu</i></a>
+		      	<ul class="left hide-on-med-and-down">
+		        	<li><a href="#sezione_1" class= animated zoomIn page-scroll">Sezione 1</a></li>
+		        	<li><a href="#sezione_2" class= animated zoomIn page-scroll">Sezione 2</a></li>
+		        	<li><a href="#sezione_3" class= animated zoomIn page-scroll">Sezione 3</a></li>
+		        	<li><a href="#sezione_4" class= animated zoomIn page-scroll">Sezione 4</a></li>
+		      	</ul>
+		      	 <ul class="side-nav" id="mobile-demo">
+			      	<li><a class="page-scroll" href="#sezione_1">Sezione 1</a></li>
+			      	<li><a class="page-scroll" href="#sezione_2">Sezione 2</a></li>
+			      	<li><a class="page-scroll" href="#sezione_3">Sezione 3</a></li>
+			      	<li><a class="page-scroll" href="#sezione_4">Sezione 4</a></li>
+			    </ul>
+	    	</div>
+	  	</nav>
+	</div>
+
+	<div id="home" class="container nascondi hidden animated tada">
+		<div class="row">
+			<div class="col s12 left-align animated fadeInLeft">
+				<h1>Ciao!</h1>
+				<h3>Sei il benvenuto.</h3>
+			</div>
+		</div>
+	</div>
+
+	<section id="sezione_1" class="container nascondi hidden animated tada">
+		<div class="row">
+			<div class="col m4 left-align">
+				<h5>Trascina il quadrato giallo all'interno del quadrato rosso.</h5>
+			</div>
+			<div class="col s8 valign-wrapper">
+				<div class="col m4"><div id="draggable" class="yellow"> </div></div>
+				<div class="col m4 offset-s4"><div id="droppable" class="red"> </div></div>
+			</div>
+		</div>
+	</section>
+	
+	<section id="sezione_2" class="container nascondi hidden animated tada">
+		<div class="row">
+			<div class="col m4 left-align">
+				<h5>Cambia il colore del quadrato da blu a viola o viceversa.</h5>
+				<a id="changeColor" class="waves-effect waves-light btn">Clicca qui</a>
+			</div>
+			<div class="col s8 m4 offset-m4 valign-wrapper">
+				<div id="changeMyColor" class="blue"></div>
+			</div>
+		</div>
+	</section>
+
+	<section id="sezione_3" class="container nascondi hidden animated tada">
+		<div class="row">
+			<div class="col m4 left-align">
+				<h5>Fai ridimensionare il quadrato arancione cliccandoci sopra.</h5>
+			</div>
+			<div class="col s8 m4 offset-m4 valign-wrapper">
+				<div id="changeMySize" class="orange"></div>
+			</div>
+		</div>
+	</section>
+
+	<section id="sezione_4" class="container nascondi hidden animated tada">
+		<div class="row">
+			<div class="col m4 left-align">
+				<h5>Clicca sul pulsante qui sotto.</h5>
+				<a id="clickMe" class="waves-effect waves-light btn">Cliccami</a>
+			</div>
+			<div class="col s8 m4 offset-m4 valign-wrapper">
+				<p></p>
+			</div>
+		</div>
+	</section>
+
+	<section class="container nascondi hidden animated tada">
+		<div class="row">
+			<div class="col s12 center-align">
+				<h5><a id="hackPsw" class="waves-effect waves-light btn  red accent-4">Hacker</a></h5>
+			</div>
+		</div>
+	</section>
+
+	<section class="container-fluid black pswFound">
+		<div class="row">
+			<div class="col s12 center-align">
+				<h1 class="red-text">La tua password è: <br><br><br><strong></strong></h1>
+			</div>
+		</div>
+	</section>
+	
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- jQuery UI -->
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<!-- Compiled and minified JavaScript -->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  	<!-- Scrolling nav -->
+	<script src="js/scrolling-nav.js"></script>
+  	<!-- myJS -->
+  	<script type="text/javascript" src="js/myjs.js"></script>
+</body>
+</html>
